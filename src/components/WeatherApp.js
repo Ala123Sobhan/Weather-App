@@ -95,8 +95,14 @@ export class WeatherApp extends Component {
      const weather_des = this.state.weather.description
 
      const weather_data = this.state.mainInfo
+
+     const temp = (weather_data.temp - 273.15).toFixed(2)
+     const temp_f = (weather_data.feels_like - 273.15).toFixed(2)
+     const temp_min = (weather_data.temp_min - 273.15).toFixed(2)
+     const temp_max = (weather_data.temp_max - 273.15).toFixed(2)
      const wind = this.state.wind
      
+    
         return (
             <div>
                 <h1 style={{backgroundColor:"white"}}>Weather App</h1>
@@ -110,11 +116,13 @@ export class WeatherApp extends Component {
                <h3 >Weather:</h3>*/}
                 <h3 >Weather(Mainly):{weather_main}</h3>
                 <h3 >Weather(Description): {weather_des}</h3>
-             
-                <h3 >Temperature: {weather_data.temp}</h3>
-                <h3 >TemperatureFeelsLike: {weather_data.feels_like}</h3>
-                <h3> Min Temperature: {weather_data.temp_min}</h3>
-                <h3 > Max Temperature: {weather_data.temp_max}</h3>
+                
+
+                <h3 >Temperature(C): {temp}</h3>
+                
+                <h3 >TemperatureFeelsLike(C): {temp_f}</h3>
+                <h3> Min Temperature(C): {temp_min}</h3>
+                <h3 > Max Temperature(C): {temp_max}</h3>
                 <h3 > Pressure: {weather_data.pressure}</h3>
                 <h3 > Humidity: {weather_data.humidity}</h3>
 
