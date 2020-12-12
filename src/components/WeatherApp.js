@@ -99,15 +99,15 @@ export class WeatherApp extends Component {
      
         return (
             <div>
-                <h1>Weather App</h1>
+                <h1 style={{backgroundColor:"white"}}>Weather App</h1>
 
 
-                <h2 style={{backgroundColor:"plum"}}>Place: {this.state.weatherData.name}</h2>
+                <h3 >Place: {this.state.weatherData.name}</h3>
 
-                <h2>Coordinate:</h2>
+               {/* <h3>Coordinate:</h3>
                      <h3 >Longitude: {lon}</h3>
                      <h3 >Latitude: {lat}</h3>
-                <h2 >Weather:</h2>
+               <h3 >Weather:</h3>*/}
                 <h3 >Weather(Mainly):{weather_main}</h3>
                 <h3 >Weather(Description): {weather_des}</h3>
              
@@ -118,7 +118,7 @@ export class WeatherApp extends Component {
                 <h3 > Pressure: {weather_data.pressure}</h3>
                 <h3 > Humidity: {weather_data.humidity}</h3>
 
-                <h2 >Wind:</h2>
+                <h3 >Wind:</h3>
                 <h3 > Speed: {wind.speed}</h3>
                 <h3 >  Degree: {wind.deg}</h3>
                 
@@ -133,6 +133,7 @@ export class WeatherApp extends Component {
                        <option value="United States">United States</option>
                  </select>
                
+                 <br/><br/>
                 <button onClick ={this.renderWeatherInfo}>Fetch</button>
             </div>
         )

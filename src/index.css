@@ -9,9 +9,10 @@
 }*/
 body {
  
- /* background: linear-gradient(to right,rgb(255, 255, 255), rgb(31, 173, 255));*/
-  background-image: url("ice.jpg");
-  font-size: 10rem;
+ /* background: linear-gradient(to right,rgb(255, 255, 255), rgb(31, 173, 255));
+  background-image: url("ice.jpg");*/
+  background: #2980B9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
- 
 }
